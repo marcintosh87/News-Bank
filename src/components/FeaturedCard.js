@@ -1,10 +1,14 @@
 import React from "react";
+import Button from "@mui/material/Button";
 
 export default function FeaturedCard({ title, summary, image, url, date }) {
   return (
     <>
       <div className="col-7">
-        <h3 className="bg-danger p-2 rounded text-uppercase font-weight-bold">
+        <h3
+          className=" p-2 rounded text-uppercase font-weight-bold"
+          style={{ backgroundColor: "#e91e63" }}
+        >
           Featured
         </h3>
         <img
@@ -18,14 +22,9 @@ export default function FeaturedCard({ title, summary, image, url, date }) {
           <p className="text-left"> Published: {date}</p>
           <p className="lead my-3 ">{summary}</p>
           <p className="lead mb-0">
-            <a
-              href={url}
-              target="_blank"
-              className="text-white fw-bold"
-              rel="noreferrer"
-            >
-              Continue reading...
-            </a>
+            <Button href={url} target="_blank" size="large">
+              Learn More
+            </Button>
           </p>
         </div>
       </div>

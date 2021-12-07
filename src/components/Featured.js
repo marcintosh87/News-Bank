@@ -6,7 +6,7 @@ import FeaturedSpotlightCard from "./FeaturedSpotlightCard";
 export default function Featured({ featured: { articles }, spotlight }) {
   return (
     <div className="container">
-      <aside className="p-5 p-md-5 mb-4 text-white rounded-5 bg-dark container">
+      <aside className="p-5 p-md-5  text-white  bg-dark ">
         <div className="row">
           {articles && (
             <FeaturedCard

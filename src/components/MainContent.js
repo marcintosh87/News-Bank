@@ -11,6 +11,7 @@ import Technology from "./categories/Technology";
 import Spotlight from "./categories/Spotlight";
 import { Routes, Route } from "react-router-dom";
 import { projectFirestore } from "./firebase/config";
+import CssBaseline from "@mui/material/CssBaseline";
 
 export default function MainContent() {
   const [featured, setFeatured] = useState([]);
@@ -24,7 +25,7 @@ export default function MainContent() {
   const [spotlight, setSpotlight] = useState([]);
   //FETCH utilities
   const baseURL = "https://newsapi.org/v2/top-headlines?";
-  const apiKey = "apiKey=bbe7b286e5174990ae246ea1fca3bc51"; //6a43000db6424ff48e743b47f8f9e402"
+  const apiKey = "apiKey=6a43000db6424ff48e743b47f8f9e402"; //bbe7b286e5174990ae246ea1fca3bc51"
   // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -124,6 +125,7 @@ export default function MainContent() {
   return (
     <div className="container">
       <Featured featured={featured} spotlight={spotlight} />
+
       <Nav />
 
       <Routes>

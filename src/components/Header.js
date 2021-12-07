@@ -45,9 +45,13 @@ export default function Header() {
               src={logo}
               alt="News Bank logo"
             />
-            <h5 id="tag" className="text-danger text-uppercase w-50 p-1  my-4">
+            <h5
+              id="tag"
+              className=" text-uppercase w-50 p-1  my-4"
+              style={{ color: "#e91e63" }}
+            >
               News from the world and <br />
-              <span className="text-warning" style={{ fontSize: "1.6em" }}>
+              <span style={{ fontSize: "1.6em", color: "#ffca28" }}>
                 <b>the community</b>
               </span>
             </h5>

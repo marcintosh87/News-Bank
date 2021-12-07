@@ -1,31 +1,30 @@
 import React from "react";
+import Button from "@mui/material/Button";
+
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
 
 export default function NewsCard({ title, image, date, description, url }) {
-  const maxLength = 500;
-
   return (
-    <div style={{ width: "300px", height: "100%" }}>
-      <div className="  border rounded overflow-hidden  mb-4 shadow-sm h-md-250 position-relative">
-        <img src={image} alt={title} className="img-fluid" />
-        <div className="col p-4 d-flex flex-column position-static bg-light ">
-          <h4 className="mb-0 text-secondary">
-            {`${
-              title.length > maxLength ? title.substring(0, maxLength) : title
-            }`}
-          </h4>
-          <div className="mb-1 text-muted">{date}</div>
-          <p className="card-text mb-auto">{description}</p>
-          <a
-            href={url}
-            target="_blank"
-            className="stretched-link"
-            rel="noreferrer"
-          >
-            Continue reading
-          </a>
-        </div>
-        <div className="col-auto d-none d-lg-block"></div>
-      </div>
-    </div>
+    <Card sx={{ maxWidth: 300 }}>
+      <CardMedia component="img" height="140" image={image} alt={title} />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          {title}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {description}
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Share</Button>
+        <Button href={url} target="_blank" size="small">
+          Learn More
+        </Button>
+      </CardActions>
+    </Card>
   );
 }
