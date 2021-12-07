@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { projectFirestore } from "./firebase/config";
 
 import logo from "./../img/News Bank-logos_white.png";
 import Modal from "./Modal";
 
 export default function Header() {
   const [showModal, setModal] = useState(false);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
 
   const handleClose = () => {
     setModal(false);
@@ -13,6 +17,20 @@ export default function Header() {
 
   const handleOpen = () => {
     setModal(true);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const userSubmission = {
+      title: title,
+      description: description,
+      imageURL: imageUrl,
+      votes: 0,
+      content: "",
+    };
+
+    projectFirestore.collection("spotlight").add(userSubmission);
+    handleClose();
   };
   return (
     <div className="bg-dark shadow mb-4  ">
@@ -55,13 +73,15 @@ export default function Header() {
                 type="text"
                 className="form-control"
                 placeholder="Enter Headline"
+                onChange={(e) => setTitle(e.target.value)}
               />
             </div>
             <div className="form-group">
               <label>Summary of event/incident</label>
-              <textArea
+              <textarea
                 className="form-control"
                 placeholder="Enter a brief summary"
+                onChange={(e) => setDescription(e.target.value)}
               />
             </div>
             <div className="form-group">
@@ -70,12 +90,13 @@ export default function Header() {
                 type="url"
                 className="form-control"
                 placeholder="Must be an image url"
+                onChange={(e) => setImageUrl(e.target.value)}
               />
             </div>
             <br />
             <button
               type="submit"
-              onClick={handleClose}
+              onClick={handleSubmit}
               className="btn btn-warning"
             >
               Submit

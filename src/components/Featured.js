@@ -1,5 +1,5 @@
 import React from "react";
-
+import defaultImage from "./../img/news-bank-featured-bg.jpeg";
 import FeaturedCard from "./FeaturedCard";
 import FeaturedSpotlightCard from "./FeaturedSpotlightCard";
 
@@ -13,7 +13,11 @@ export default function Featured({ featured: { articles }, spotlight }) {
               title={articles[0].title}
               summary={articles[0].description}
               url={articles[0].url}
-              image={articles[0].urlToImage}
+              image={
+                articles[0].urlToImage === null
+                  ? defaultImage
+                  : articles[0].urlToImage
+              }
               date={articles[0].publishedAt}
             />
           )}

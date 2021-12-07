@@ -1,4 +1,5 @@
 import React from "react";
+//
 
 import SpotlightCard from "../SpotlightCard";
 import defaultImage from "./../../img/news-bank-featured-bg.jpeg";
@@ -10,11 +11,12 @@ export default function NewsSection({ spotlight }) {
         spotlight.map((each, index) => {
           return (
             <SpotlightCard
-              key={index}
+              key={each.id}
               title={each.title}
               image={each.imageURL === null ? defaultImage : each.imageURL}
               description={each.description}
               votes={each.votes}
+              id={each.id}
             />
           );
         })}

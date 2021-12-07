@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { projectFirestore } from "./firebase/config";
 
 export default function SpotlightCard({
   title,
@@ -7,8 +8,16 @@ export default function SpotlightCard({
   description,
   url,
   votes,
+  id,
 }) {
   const maxLength = 500;
+
+  const [vote, setVote] = useState(votes);
+
+  const handleVote = () => {
+    setVote(vote + 1);
+    projectFirestore.collection("spotlight").doc(id).update({ votes: vote });
+  };
 
   return (
     <div style={{ width: "300px", height: "100%" }}>
@@ -24,7 +33,9 @@ export default function SpotlightCard({
           <p className="card-text mb-auto">{description}</p>
           <p className="text-primary">Continue Reading</p>
           <div className="row align-items-center ">
-            <button className="btn btn-warning col">Vote Up</button>
+            <button className="btn btn-warning col" onClick={handleVote}>
+              Vote Up
+            </button>
             <p className="col-6 m-1">Votes: {votes}</p>
           </div>
         </div>

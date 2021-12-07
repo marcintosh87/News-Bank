@@ -103,26 +103,20 @@ export default function MainContent() {
   }, []);
   //SPOTLIGHT -FIREBASE FETCH
   useEffect(() => {
-    projectFirestore
+    const db = projectFirestore
       .collection("spotlight")
       .orderBy("votes", "desc")
-      .get()
-
-      .then((data) => {
-        if (data.empty) {
+      .onSnapshot((snapshot) => {
+        if (snapshot.empty) {
           alert("Nothing here");
         } else {
           let results = [];
-          data.docs.forEach((doc) =>
+          snapshot.docs.forEach((doc) =>
             results.push({ id: doc.id, ...doc.data() })
           );
           setSpotlight(results);
           setLoading(false);
         }
-      })
-      .catch((error) => {
-        setError("Could not fetch data");
-        console.log(error.message);
       });
   }, []);
 
