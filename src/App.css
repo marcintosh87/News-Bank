@@ -36,3 +36,36 @@
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 1395px) {
+  #tag {
+    font-size: 1.3em;
+  }
+}
+@media (max-width: 991px) {
+  #tag {
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 767px) {
+  #tag {
+    font-size: 0.6em;
+  }
+}
+
+.fade-in {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.4s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
