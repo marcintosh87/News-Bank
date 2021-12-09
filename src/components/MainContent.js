@@ -11,7 +11,7 @@ import Technology from "./categories/Technology";
 import Spotlight from "./categories/Spotlight";
 import { Routes, Route } from "react-router-dom";
 import { projectFirestore } from "./firebase/config";
-import CssBaseline from "@mui/material/CssBaseline";
+import { Container } from "@mui/material";
 
 export default function MainContent() {
   const [featured, setFeatured] = useState([]);
@@ -121,35 +121,37 @@ export default function MainContent() {
       });
   }, []);
 
-  if (loading) return <h1>loading...</h1>;
+  if (loading) return <h1>fetching news...</h1>;
   return (
-    <div className="container">
+    <div>
       <Featured featured={featured} spotlight={spotlight} />
 
-      <Nav />
+      <Container>
+        <Nav />
 
-      <Routes>
-        <Route path="/" element={<NewsSection newsData={newsData} />} />
-        <Route
-          path="/business"
-          element={<BusinessSection newsData={business} />}
-        />
-        <Route
-          path="/entertainment"
-          element={<Entertainment newsData={entertainment} />}
-        />
-        <Route path="/sports" element={<Sports newsData={sports} />} />
-        <Route
-          path="/technology"
-          element={<Technology newsData={technology} />}
-        />
-        <Route path="/health" element={<Health newsData={health} />} />
-        <Route path="/science" element={<Science newsData={science} />} />
-        <Route
-          path="/spotlight"
-          element={<Spotlight spotlight={spotlight} />}
-        />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<NewsSection newsData={newsData} />} />
+          <Route
+            path="/business"
+            element={<BusinessSection newsData={business} />}
+          />
+          <Route
+            path="/entertainment"
+            element={<Entertainment newsData={entertainment} />}
+          />
+          <Route path="/sports" element={<Sports newsData={sports} />} />
+          <Route
+            path="/technology"
+            element={<Technology newsData={technology} />}
+          />
+          <Route path="/health" element={<Health newsData={health} />} />
+          <Route path="/science" element={<Science newsData={science} />} />
+          <Route
+            path="/spotlight"
+            element={<Spotlight spotlight={spotlight} />}
+          />
+        </Routes>
+      </Container>
     </div>
   );
 }

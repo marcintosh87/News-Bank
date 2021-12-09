@@ -26,6 +26,7 @@ export default function NewsSection({ spotlight }) {
                     description={each.description}
                     votes={each.votes}
                     id={each.id}
+                    content={each.content}
                   />
                 </Grid>
               );

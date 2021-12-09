@@ -6,10 +6,10 @@ export default function FeaturedCard({ title, summary, image, url, date }) {
     <>
       <div className="col-7">
         <h3
-          className=" p-2 rounded text-uppercase font-weight-bold"
-          style={{ backgroundColor: "#e91e63" }}
+          className=" px-2  text-uppercase font-weight-bold"
+          style={{ color: "#e91e63" }}
         >
-          Featured
+          <strong>Featured</strong>
         </h3>
         <img
           src={image}

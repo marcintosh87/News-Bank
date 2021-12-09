@@ -39,17 +39,17 @@
 
 @media (max-width: 1395px) {
   #tag {
-    font-size: 1.3em;
+    font-size: 0.9em;
   }
 }
 @media (max-width: 991px) {
   #tag {
-    font-size: 0.9em;
+    font-size: 0.6em;
   }
 }
 @media (max-width: 767px) {
   #tag {
-    font-size: 0.6em;
+    font-size: 0.4em;
   }
 }
 
@@ -74,7 +74,16 @@ aside {
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.17);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
+
   border: 1px solid rgba(255, 255, 255, 0.18);
   width: 100%;
+}
+
+.row.no-pad {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-pad > [class*="col-"] {
+  padding-right: 0;
+  padding-left: 0;
 }
