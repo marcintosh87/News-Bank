@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import MainContent from "./components/MainContent";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-
+import "./components/modal.css";
 const theme = createTheme({
   palette: {
     primary: {

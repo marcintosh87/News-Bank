@@ -123,7 +123,7 @@ export default function MainContent() {
 
   if (loading) return <h1>fetching news...</h1>;
   return (
-    <div>
+    <>
       <Featured featured={featured} spotlight={spotlight} />
 
       <Container>
@@ -152,6 +152,6 @@ export default function MainContent() {
           />
         </Routes>
       </Container>
-    </div>
+    </>
   );
 }

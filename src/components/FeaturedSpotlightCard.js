@@ -27,6 +27,7 @@ export default function FeaturedSpotlightCard({
   const handleOpen = () => {
     setModal(true);
   };
+
   return (
     <>
       <div className="col-4">
@@ -65,7 +66,7 @@ export default function FeaturedSpotlightCard({
         </p>
       </div>
       {showModal && (
-        <Modal handleClose={handleClose}>
+        <Modal>
           <div className="container">
             <img
               src={image}
@@ -88,7 +89,7 @@ export default function FeaturedSpotlightCard({
         </Modal>
       )}
       {showModal2 && (
-        <Modal handleClose={handleClose}>
+        <Modal>
           <div className="container">
             <img
               src={image2}

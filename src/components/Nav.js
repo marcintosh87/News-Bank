@@ -22,6 +22,7 @@ export default function Nav() {
           label="Entertainment"
           to="/entertainment"
           component={Link}
+          style={{ position: "relative" }}
         />
         <Tab value={3} label="Sports" to="/sports" component={Link} />
         <Tab value={4} label="Technology" to="/technology" component={Link} />
