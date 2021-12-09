@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/News-Bank/static/css/main.6b140670.chunk.css",
+    "main.js": "/News-Bank/static/js/main.c5a74bf9.chunk.js",
+    "main.js.map": "/News-Bank/static/js/main.c5a74bf9.chunk.js.map",
+    "runtime-main.js": "/News-Bank/static/js/runtime-main.e8b0514a.js",
+    "runtime-main.js.map": "/News-Bank/static/js/runtime-main.e8b0514a.js.map",
+    "static/css/2.8c0e6b67.chunk.css": "/News-Bank/static/css/2.8c0e6b67.chunk.css",
+    "static/js/2.b9b183c4.chunk.js": "/News-Bank/static/js/2.b9b183c4.chunk.js",
+    "static/js/2.b9b183c4.chunk.js.map": "/News-Bank/static/js/2.b9b183c4.chunk.js.map",
+    "index.html": "/News-Bank/index.html",
+    "static/css/2.8c0e6b67.chunk.css.map": "/News-Bank/static/css/2.8c0e6b67.chunk.css.map",
+    "static/css/main.6b140670.chunk.css.map": "/News-Bank/static/css/main.6b140670.chunk.css.map",
+    "static/js/2.b9b183c4.chunk.js.LICENSE.txt": "/News-Bank/static/js/2.b9b183c4.chunk.js.LICENSE.txt",
+    "static/media/News Bank-logos_white.070f7579.png": "/News-Bank/static/media/News Bank-logos_white.070f7579.png",
+    "static/media/bg-cities.6d04bde2.jpg": "/News-Bank/static/media/bg-cities.6d04bde2.jpg",
+    "static/media/news-bank-featured-bg.132b9b71.jpeg": "/News-Bank/static/media/news-bank-featured-bg.132b9b71.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e8b0514a.js",
+    "static/css/2.8c0e6b67.chunk.css",
+    "static/js/2.b9b183c4.chunk.js",
+    "static/css/main.6b140670.chunk.css",
+    "static/js/main.c5a74bf9.chunk.js"
+  ]
+}
