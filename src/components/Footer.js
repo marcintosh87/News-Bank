@@ -12,7 +12,14 @@ export default function Footer() {
             >
               <svg className="bi" width="30" height="24"></svg>
             </a>
-            <span className="text-muted">© 2021 News Bank</span>
+            <a
+              href="https://marcintosh87.github.io/Cocktail-Lounge/"
+              target="_blank"
+              rel="noreferrer"
+              style={{ textDecoration: "none" }}
+            >
+              <span className="text-muted">© 2021 News Bank</span>
+            </a>
           </div>
 
           <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">

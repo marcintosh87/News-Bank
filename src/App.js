@@ -19,6 +19,7 @@ const theme = createTheme({
       dark: "#b28d1c",
       contrastText: "#fff",
     },
+    zIndex: "1",
   },
 });
 function App() {

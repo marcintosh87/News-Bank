@@ -4,6 +4,8 @@ import { projectFirestore } from "./firebase/config";
 import logo from "./../img/News Bank-logos_white.png";
 import Modal from "./Modal";
 import Button from "@mui/material/Button";
+import Avatar from "@mui/material/Avatar";
+import Stack from "@mui/material/Stack";
 
 export default function Header() {
   const [showModal, setModal] = useState(false);
@@ -65,6 +67,12 @@ export default function Header() {
                 User Form
               </button>
             </div>
+            <Stack className="col-1">
+              <Avatar
+                alt="Remy Sharp"
+                src="https://mui.com/static/images/avatar/3.jpg"
+              />
+            </Stack>
           </div>
         </div>
       </div>
