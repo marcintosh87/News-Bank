@@ -24,8 +24,7 @@ export default function MainContent() {
   const [science, setScience] = useState([]);
   const [spotlight, setSpotlight] = useState([]);
   //FETCH utilities
-  const baseURL = "https://newsapi.org/v2/top-headlines?";
-  const apiKey = "apiKey=bbe7b286e5174990ae246ea1fca3bc51"; //bbe7b286e5174990ae246ea1fca3bc51"
+
   // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
